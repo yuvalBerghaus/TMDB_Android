@@ -25,12 +25,14 @@ public class QuestionModel {
     @Expose
     private String[] incorrect_answers;
     private ArrayList<String> shuffeled_options;
+    private boolean[] isSelected;
     public ArrayList<String> getShuffeled_options() {
         return shuffeled_options;
     }
     public boolean isShuffled;
     public QuestionModel() {
         isShuffled = false;
+        isSelected = new boolean[4];
     }
     public void shuffleOptions() {
         if(!isShuffled) {
@@ -65,5 +67,8 @@ public class QuestionModel {
 
     public String[] getIncorrect_answers() {
         return incorrect_answers;
+    }
+    public void setIsSelected(int index, boolean isSelected) {
+        this.isSelected[index] = isSelected;
     }
 }
