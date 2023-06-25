@@ -24,15 +24,26 @@ public class QuestionModel {
     @SerializedName("incorrect_answers")
     @Expose
     private String[] incorrect_answers;
+
+    public void setClicked(boolean clicked) {
+        isClicked = clicked;
+    }
+
+    public boolean isClicked() {
+        return isClicked;
+    }
+
+    private boolean isClicked;
     private ArrayList<String> shuffeled_options;
-    private boolean[] isSelected;
     public ArrayList<String> getShuffeled_options() {
+        if(!isShuffled)
+            shuffleOptions();
         return shuffeled_options;
     }
     public boolean isShuffled;
     public QuestionModel() {
         isShuffled = false;
-        isSelected = new boolean[4];
+        isClicked = false;
     }
     public void shuffleOptions() {
         if(!isShuffled) {
@@ -68,7 +79,5 @@ public class QuestionModel {
     public String[] getIncorrect_answers() {
         return incorrect_answers;
     }
-    public void setIsSelected(int index, boolean isSelected) {
-        this.isSelected[index] = isSelected;
-    }
+
 }

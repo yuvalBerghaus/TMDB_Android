@@ -6,80 +6,13 @@
     android:layout_height="wrap_content">
 
     <Button
-        android:id="@+id/option1"
-        android:layout_width="237dp"
-        android:layout_height="57dp"
+        android:id="@+id/option"
+        style="@style/button"
+        android:layout_width="298dp"
+        android:layout_height="56dp"
         android:text="Button"
-        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/question" />
-
-    <Button
-        android:id="@+id/option2"
-        android:layout_width="237dp"
-        android:layout_height="57dp"
-        android:text="Button"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option1" />
-
-    <Button
-        android:id="@+id/option3"
-        android:layout_width="237dp"
-        android:layout_height="57dp"
-        android:text="Button"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.522"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option2" />
-
-    <Button
-        android:id="@+id/option4"
-        android:layout_width="237dp"
-        android:layout_height="57dp"
-        android:text="Button"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option3" />
-
-    <TextView
-        android:id="@+id/question"
-        android:layout_width="290dp"
-        android:layout_height="87dp"
-        android:text="question"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/answer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="answer"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option4" />
-
-    <EditText
-        android:id="@+id/editTextTextMultiLine"
-        android:layout_width="345dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:gravity="start|top"
-        android:inputType="textMultiLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/option4" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
